@@ -1,0 +1,101 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.navButton {
+  display: block;
+  padding: 0.5rem 1rem !important;
+  border: 2px solid $white;
+  &:focus {
+    outline-color: $green;
+  }
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  background-color: $black;
+  width: 100%;
+  transition: left 0.25s ease;
+  z-index: 1000;
+
+  li,
+  a,
+  .dropdown button {
+    font-size: 1.25rem;
+    margin: 0.125rem 0;
+    padding: 0.125rem 0.5rem;
+    color: $white !important;
+    @include default-heading;
+    text-decoration: none;
+    width: auto;
+    text-align: left;
+    display: block;
+    &:focus {
+      outline: 2px solid $green;
+    }
+  }
+}
+
+.dropdown button {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown a {
+  padding: 0.125rem 1rem;
+}
+
+.activeNav {
+  left: 0;
+}
+
+.mainNav,
+.subNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.mainNav {
+  padding: 1rem 0.5rem;
+}
+
+.subNav {
+  height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: height 0.25s ease;
+  li,
+  a {
+    padding: 0.125rem 0.5rem;
+  }
+}
+
+.activeSubNav {
+  height: 125px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  z-index: 500;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(17, 17, 17, 0.7);
+  transition: opacity 0.25s ease;
+}
+
+.overlayActive {
+  left: 0;
+  opacity: 1;
+}

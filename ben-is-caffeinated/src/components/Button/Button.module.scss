@@ -1,0 +1,13 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.button {
+  @include default-heading;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.primary {
+  background-color: $black;
+  color: $white;
+}
