@@ -1,11 +1,9 @@
-@import "./variables";
+@use "@/styles/variables" as *;
 
 @mixin default-text {
   font-family: "Nuntio Sans", sans-serif;
-  color: $black;
 }
 
 @mixin default-heading {
   font-family: "Contrail One", sans-serif;
-  color: $black;
 }

@@ -1,0 +1,84 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.navigation {
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    display: block;
+    width: auto;
+  }
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li,
+  a,
+  button {
+    color: $white;
+    @include default-heading;
+    text-decoration: none;
+    font-size: 1.25rem;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  a,
+  button {
+    padding: 0.5rem 1rem;
+  }
+
+  button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid $green;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  display: block;
+}
+
+.subNav {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: $black;
+  padding: 0.75rem 0.25rem 0.5rem;
+
+  &[hidden] {
+    display: none;
+  }
+
+  a,
+  li {
+    text-wrap: nowrap;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.activeSubNav {
+  display: flex;
+}
