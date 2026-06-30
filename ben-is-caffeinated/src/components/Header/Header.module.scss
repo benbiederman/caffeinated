@@ -19,10 +19,6 @@
 }
 
 .logo {
-  &:focus {
-    outline-color: $green;
-  }
-
   img {
     display: flex;
     align-content: center;
@@ -40,10 +36,8 @@
   left: 0;
   top: -100%;
   z-index: 1001;
-
   &:focus {
     top: 0;
-    outline-color: $green;
   }
 }
 
@@ -66,7 +60,4 @@
 .profileIcon {
   margin-right: 0.25rem;
   padding: 0.4rem 0.25rem 0;
-  &:focus {
-    outline-color: $green;
-  }
 }

@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <Button label={"Skip to main content"} className={styles.skipNavButton} />
       <Link href="/" className={styles.logo}>
-        <Image src={logo} alt="" width={150} height={60} />
+        <Image src={logo} alt="" width={135} height={54} />
       </Link>
       <div className={styles.navContainer}>
         <DesktopNavigation />
