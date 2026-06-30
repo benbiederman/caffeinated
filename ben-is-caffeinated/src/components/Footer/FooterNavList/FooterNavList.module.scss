@@ -1,0 +1,25 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: $green;
+        text-decoration: underline;
+      }
+    }
+  }
+}
