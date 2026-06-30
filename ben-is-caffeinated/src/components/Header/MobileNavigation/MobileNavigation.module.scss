@@ -4,10 +4,7 @@
 .navButton {
   display: block;
   padding: 0.5rem 1rem !important;
-  border: 2px solid $white;
-  &:focus {
-    outline-color: $green;
-  }
+  border: 2px solid $white !important;
 
   @media screen and (min-width: 992px) {
     display: none;
@@ -35,9 +32,6 @@
     width: auto;
     text-align: left;
     display: block;
-    &:focus {
-      outline: 2px solid $green;
-    }
   }
 }
 

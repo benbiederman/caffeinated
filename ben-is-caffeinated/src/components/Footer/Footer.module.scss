@@ -1,0 +1,170 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.footer {
+  background: $black;
+  color: $white;
+  padding: 2rem 1rem;
+}
+
+.inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.subscribeSection {
+  display: grid;
+  gap: 1.25rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba($green, 0.3);
+}
+
+.subscribeCopy {
+  max-width: 38rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+  }
+
+  p {
+    margin: 0;
+    color: $white;
+    line-height: 1.5;
+  }
+}
+
+.subscribeForm {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 38rem;
+
+  input,
+  button {
+    min-height: 3rem;
+    border-radius: 3px;
+  }
+
+  input {
+    padding: 0 1rem;
+    background: $white;
+    color: $black;
+    border: 2px solid $gray;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  button {
+    padding: 0 1.25rem;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      background: $green;
+      color: $black;
+    }
+  }
+}
+
+.navGrid {
+  display: grid;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.navSection,
+.socialSection {
+  h3 {
+    margin: 0 0 1rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.socialList {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3px;
+    background: transparent;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      background: rgba($green, 0.4);
+      transform: translateY(-2px);
+    }
+  }
+
+  img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.bottomBar {
+  border-top: 1px solid rgba($green, 0.3);
+  padding-top: 1.5rem;
+
+  p {
+    margin: 0;
+    color: $white;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 4rem 2rem 2rem;
+  }
+
+  .navGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .subscribeForm {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}

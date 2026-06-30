@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./MobileNavigation.module.scss";
-import { mainNavItems } from "@/config/navigation";
+import { mainNavItems } from "@/config/headerNavigation";
 import Button from "@/components/Button";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
