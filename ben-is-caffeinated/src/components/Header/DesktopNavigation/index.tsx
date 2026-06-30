@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./DesktopNavigation.module.scss";
-import { mainNavItems, NavItem } from "@/config/navigation";
+import { mainNavItems } from "@/config/headerNavigation";
 import Link from "next/link";
 
 const DesktopNavigation = () => {
